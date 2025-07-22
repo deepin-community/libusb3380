@@ -12,7 +12,7 @@ Package: libusb3380-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libusb3380-0t64 (= ${binary:Version}), libusb-1.0-0-dev, ${misc:Depends}
+Depends: libusb3380-0 (= ${binary:Version}), libusb-1.0-0-dev, ${misc:Depends}
 Description: USB3380 abstraction layer for libusb: development
  The USB 3380 is a PCI Express Gen 2 to USB 3.0 SuperSpeed Peripheral
  Controller. It features one PCI Express Gen 2 x1 port and one USB 3.0
@@ -26,10 +26,7 @@ Description: USB3380 abstraction layer for libusb: development
  .
  This package contains development files.
 
-Package: libusb3380-0t64
-Provides: ${t64:Provides}
-Replaces: libusb3380-0
-Breaks: libusb3380-0 (<< ${source:Version})
+Package: libusb3380-0
 Architecture: any
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
