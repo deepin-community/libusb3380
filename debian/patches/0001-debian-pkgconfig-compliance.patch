@@ -1,0 +1,10 @@
+Fix pkgconfig to avoid lintian warning.
+--- a/libusb3380.pc.in
++++ b/libusb3380.pc.in
+@@ -10,6 +10,3 @@
+ Requires: libusb
+ Conflicts:
+ Cflags: -I${includedir}
+-Libs: -L${libdir} -lusb-1.0
+-Libs.private:  -lusb-1.0
+-
