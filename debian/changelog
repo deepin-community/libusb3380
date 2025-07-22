@@ -1,5 +1,19 @@
-template-repository (1.0-1) unstable; urgency=medium
+libusb3380 (0.0.1+git20190125.c83d1e9-2.1) unstable; urgency=medium
 
-  * Initial release
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1062692
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Graham Inggs <ginggs@debian.org>  Wed, 28 Feb 2024 20:57:08 +0000
+
+libusb3380 (0.0.1+git20190125.c83d1e9-2) unstable; urgency=medium
+
+  * Fixed debian/copyright: added forgotten copyright holder.
+  * Bumped Standards-Version.
+
+ -- Sepi Gair <sepigair@email.cz>  Thu, 09 Apr 2020 11:25:30 +0200
+
+libusb3380 (0.0.1+git20190125.c83d1e9-1) unstable; urgency=medium
+
+  * Initial release (Closes: #945152)
+
+ -- Sepi Gair <sepigair@email.cz>  Thu, 28 Nov 2019 12:42:25 +0100

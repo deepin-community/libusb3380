@@ -1,0 +1,20 @@
+Linking pthreads.
+--- libusb3380-0.0.1+git20190125.c83d1e9.orig/CMakeLists.txt
++++ libusb3380-0.0.1+git20190125.c83d1e9/CMakeLists.txt
+@@ -36,6 +36,7 @@ endif()
+ set(CROSS_COMPILE_INCLUDE_PATH "/usr/${CC_ARCH}/include")
+ set(CROSS_COMPILE_LIB_PATH     "/usr/${CC_ARCH}/lib")
+ 
++find_package(Threads REQUIRED)
+ find_package(libusb-1.0 REQUIRED)
+ 
+ 
+@@ -62,7 +63,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Windows")
+ endif()
+ 
+ add_library(usb3380 SHARED ${USB3380_FILES})
+-target_link_libraries(usb3380 ${LIBUSB_1_LIBRARIES} ${SYSTEM_LIBS})
++target_link_libraries(usb3380 Threads::Threads ${LIBUSB_1_LIBRARIES} ${SYSTEM_LIBS})
+ set_target_properties(usb3380 PROPERTIES VERSION ${LIBVER} SOVERSION ${MAJOR_VERSION})
+ 
+ install(TARGETS usb3380 DESTINATION ${LIBUSB3380_LIBRARY_DIR})
